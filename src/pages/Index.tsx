@@ -1,12 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import { Navigation } from '@/components/Navigation';
+import { HeroSection } from '@/components/HeroSection';
+import { ProblemSolutionSection } from '@/components/ProblemSolutionSection';
+import { FeaturesSection } from '@/components/FeaturesSection';
+import { UseCasesSection } from '@/components/UseCasesSection';
+import { CTASection } from '@/components/CTASection';
+import { Footer } from '@/components/Footer';
+import { CalendlyModal } from '@/components/CalendlyModal';
 
 const Index = () => {
+  const [calendlyOpen, setCalendlyOpen] = useState(false);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation onBookDemo={() => setCalendlyOpen(true)} />
+      <CalendlyModal open={calendlyOpen} onOpenChange={setCalendlyOpen} />
+      
+      <HeroSection onBookDemo={() => setCalendlyOpen(true)} />
+      <ProblemSolutionSection />
+      <FeaturesSection />
+      <UseCasesSection />
+      <CTASection onBookDemo={() => setCalendlyOpen(true)} />
+      <Footer />
     </div>
   );
 };
