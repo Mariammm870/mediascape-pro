@@ -1,6 +1,6 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from "react";
 
-type Language = 'en' | 'ka';
+type Language = "en" | "ka";
 
 interface LanguageContextType {
   language: Language;
@@ -11,149 +11,181 @@ interface LanguageContextType {
 const translations = {
   en: {
     // Navigation
-    'nav.features': 'Features',
-    'nav.useCases': 'Use Cases',
-    'nav.contact': 'Contact',
-    'nav.bookDemo': 'Book a Demo',
-    
+    "nav.features": "Features",
+    "nav.useCases": "Use Cases",
+    "nav.contact": "Contact",
+    "nav.bookDemo": "Book a Demo",
+
     // Hero
-    'hero.title': 'Turn Media Noise into Actionable Insights',
-    'hero.subtitle': 'Automated media monitoring and analytics in real-time',
-    'hero.poweredBy': 'Powered by AI-driven analytics for media intelligence teams.',
-    'hero.cta.demo': 'Book a Demo',
-    'hero.cta.contact': 'Contact Us',
-    
+    "hero.title": "Transform Media Data into Actionable Intelligence",
+    "hero.subtitle":
+      "Expert Insights, Zero Delay: Deep Media Analytics Delivered Instantly",
+    "hero.poweredBy":
+      "Powerful AI Technology for Cutting-Edge Media Monitoring",
+    "hero.cta.demo": "Book a Demo",
+    "hero.cta.contact": "Contact Us",
+
     // Problem/Solution
-    'problem.title': 'Understand Your Media Landscape Instantly',
-    'problem.text': 'Organizations struggle to keep up with online news, print, and social content. Manual monitoring is time-consuming and incomplete.',
-    'solution.automated': 'Automated media data collection',
-    'solution.ai': 'AI-based sentiment and trend analysis',
-    'solution.alerts': 'Real-time alerts and summaries',
-    
+    "problem.title": "Understand Your Media Landscape Instantly",
+    "problem.text":
+      "Organizations today face an overwhelming flow of media content across online news, print outlets, and social platforms. This constant volume creates a complex environment, where manual media monitoring becomes costly, slow, and ineffective making online reputation management and data-driven decisions significantly harder.",
+    "solution.automated": "Full Media Data Automation (24/7)",
+    "solution.ai": "AI-Powered Deep Sentiment and Trend Analysis",
+    "solution.alerts": "Real-Time Alerts and Daily Summaries (Insights)",
+
     // Features
-    'features.title': 'Powerful Features for Media Intelligence',
-    'features.subtitle': 'Everything you need to monitor, analyze, and understand your media presence',
-    'features.sov.title': 'Share of Voice',
-    'features.sov.desc': 'Measure media coverage by channel and track your brand visibility across all platforms.',
-    'features.benchmark.title': 'Benchmark Trends',
-    'features.benchmark.desc': 'Compare performance over time with comprehensive trend analysis and historical data.',
-    'features.channel.title': 'Channel Analytics',
-    'features.channel.desc': 'Visualize media distribution across different channels and platforms.',
-    'features.sentiment.title': 'Sentiment Analysis',
-    'features.sentiment.desc': 'AI-powered detection of positive, neutral, and negative mentions in real-time.',
-    'features.sources.title': 'Source Links',
-    'features.sources.desc': 'Access original articles instantly with direct links to all mentioned sources.',
-    'features.reports.title': 'Automated Reports',
-    'features.reports.desc': 'Generate weekly, monthly, and annual summaries automatically.',
-    
+    "features.title": "Powerful Functionality",
+    "features.subtitle":
+      "Automated media monitoring, results analysis, and accurate data - all on one platform",
+    "features.sov.title": "Share of Voice",
+    "features.sov.desc":
+      "Measure media coverage volume by channel and monitor brand visibility across all platforms",
+    "features.benchmark.title": "Benchmark & Trend Analysis",
+    "features.benchmark.desc":
+      "Observe changes over time. Compare current results with historical data, identify key trends, and understand your brand's media dynamics.",
+    "features.channel.title": "Detailed Channel Analytics",
+    "features.channel.desc":
+      "Visualize how brand mentions are distributed across different channels and platforms with clean, clear, and easy-to-read charts.",
+    "features.sentiment.title": "Sentiment Analysis",
+    "features.sentiment.desc":
+      "AI identifies the tone of every media mention in real-time: positive, neutral, or negative. As a result, you gain an accurate and objective picture of the public sentiment towards your brand.",
+    "features.sources.title": "Access to Sources",
+    "features.sources.desc":
+      "The platform collects direct links to original articles, ensuring complete data transparency and authenticity.",
+    "features.reports.title": "Automated Reporting and Summaries",
+    "features.reports.desc":
+      "Daily, weekly, monthly, and annual reports are generated automatically.",
+
     // Use Cases
-    'useCases.title': 'Trusted by Analysts Across Industries',
-    'useCases.ecommerce.title': 'E-commerce',
-    'useCases.ecommerce.desc': 'Track brand visibility and campaign impact across all marketing channels and media outlets.',
-    'useCases.financial.title': 'Financial Sector',
-    'useCases.financial.desc': 'Analyze public sentiment and market positioning with real-time financial media monitoring.',
-    
+    "useCases.title": "Trusted AI Platform for Leading Industries",
+    "useCases.ecommerce.title": "E-commerce",
+    "useCases.ecommerce.desc":
+      "Monitor brand visibility, measure marketing campaign ROI, and assess competitors’ Share of Voice (SOV) across all digital channels",
+    "useCases.financial.title": "Financial Services & Banking",
+    "useCases.financial.desc":
+      "Analyze public sentiment, assess market positioning, and manage reputational risks in real-time using financial media monitoring.",
+
     // CTA
-    'cta.title': 'Get powerful media insights – instantly.',
-    'cta.subtitle': 'Join leading organizations using AI-powered media monitoring',
-    
+    "cta.title": "Crisis Prevention Starts Before the First Wave",
+    "cta.subtitle":
+      "JJoin the leading organizations already leveraging our AI-powered media monitoring system for strategic advantage.",
+
     // Contact
-    'contact.title': 'Get in Touch',
-    'contact.subtitle': 'Have questions? We\'d love to hear from you.',
-    'contact.name': 'Name',
-    'contact.email': 'Email',
-    'contact.message': 'Message',
-    'contact.send': 'Send Message',
-    'contact.info': 'Contact Information',
-    
+    "contact.title": "Get in Touch",
+    "contact.subtitle": "Have questions? We'd love to hear from you.",
+    "contact.name": "Name",
+    "contact.email": "Email",
+    "contact.message": "Message",
+    "contact.send": "Send Message",
+    "contact.info": "Contact Information",
+
     // Footer
-    'footer.rights': '© 2025 Media Monitoring AI. All rights reserved.',
-    'footer.company': 'Company',
-    'footer.about': 'About Us',
-    'footer.careers': 'Careers',
-    'footer.blog': 'Blog',
-    'footer.product': 'Product',
-    'footer.features': 'Features',
-    'footer.pricing': 'Pricing',
-    'footer.security': 'Security',
+    "footer.rights": "© 2025 Media Monitoring AI. All rights reserved.",
+    "footer.company": "Company",
+    "footer.about": "About Us",
+    "footer.careers": "Careers",
+    "footer.blog": "Blog",
+    "footer.product": "Product",
+    "footer.features": "Features",
+    "footer.pricing": "Pricing",
+    "footer.security": "Security",
   },
   ka: {
     // Navigation
-    'nav.features': 'ფუნქციები',
-    'nav.useCases': 'გამოყენება',
-    'nav.contact': 'კონტაქტი',
-    'nav.bookDemo': 'დემოს ჩვენება',
-    
+    "nav.features": "ფუნქციები",
+    "nav.useCases": "გამოყენება",
+    "nav.contact": "კონტაქტი",
+    "nav.bookDemo": "დემოს ჩვენება",
+
     // Hero
-    'hero.title': 'გადააქციე მედია ხმაური ანალიტიკურ შედეგებად',
-    'hero.subtitle': 'ავტომატიზირებული მედია მონიტორინგი და ანალიტიკა რეალურ დროში',
-    'hero.poweredBy': 'AI-ზე დაფუძნებული ანალიტიკა მედია ინტელექტის გუნდებისთვის.',
-    'hero.cta.demo': 'დემოს ჩვენება',
-    'hero.cta.contact': 'დაგვიკავშირდით',
-    
+    "hero.title": "მძლავრი AI ტექნოლოგია მედია მონიტორინგისთვის",
+    "hero.subtitle":
+      "მიიღე ღრმა ანალიტიკა და ინსაითები ექსპერტის დონეზე, წამებში",
+    "hero.poweredBy":
+      "AI ზუსტი სტრატეგიისთვის: გარდაქმენით მედია სტატისტიკა მოქმედებად!",
+    "hero.cta.demo": "ნახე დემო",
+    "hero.cta.contact": "გაიარე უფასო კონსულტაცია",
+
     // Problem/Solution
-    'problem.title': 'გაიგე შენი მედია გარემო მყისიერად',
-    'problem.text': 'ორგანიზაციებს უჭირთ ონლაინ ახალი ამბების, პრინტის და სოციალური კონტენტის მონიტორინგი. ხელით მონიტორინგი დროში ძვირია და არასრული.',
-    'solution.automated': 'ავტომატიზირებული მედია მონაცემების შეგროვება',
-    'solution.ai': 'AI-ზე დაფუძნებული სენტიმენტისა და ტრენდების ანალიზი',
-    'solution.alerts': 'რეალურ დროში შეტყობინებები და შეჯამებები',
-    
+    "problem.title": "გაიგე შენი მედია გარემო მყისიერად",
+    "problem.text":
+      "დღევანდელ რეალობაში ორგანიზაციები ეჯახებიან მედია მასალების უწყვეტ ნაკადს  ონლაინ ახალი ამბები, ბეჭდური მედია და სოციალური კონტენტი ერთად ქმნის რთულ და ქაოტურ ეკოსისტემას. მონიტორინგის ხელით მართვა ძვირი, ნელი და ხშირად არაეფექტურია, რაც სერიოზულად ართულებს ონლაინ რეპუტაციის დაცვას და ინფორმირებულ გადაწყვეტილებებს.",
+    "solution.automated": "მედია მონაცემების სრულ ავტომატიზაცია 24/7-ზე",
+    "solution.ai":
+      "AI-ზე დაფუძნებული სენტიმენტისა და ტრენდების სიღრმისეული ანალიზი",
+    "solution.alerts": "მყისიერი შეტყობინება და ყოველდღიური შეჯამება",
+
     // Features
-    'features.title': 'ძლიერი ფუნქციები მედია ინტელექტისთვის',
-    'features.subtitle': 'ყველაფერი რაც გჭირდება თქვენი მედია არსებობის მონიტორინგისთვის, ანალიზისთვის და გაგებისთვის',
-    'features.sov.title': 'ხმის წილი',
-    'features.sov.desc': 'გაზომე მედია გაშუქების არხებით და თვალი ადევნე ბრენდის ხილვადობას ყველა პლატფორმაზე.',
-    'features.benchmark.title': 'ბენჩმარკ ტრენდები',
-    'features.benchmark.desc': 'შეადარე შედეგები დროში ტრენდების ანალიზით და ისტორიული მონაცემებით.',
-    'features.channel.title': 'არხის ანალიტიკა',
-    'features.channel.desc': 'ვიზუალიზაცია მედია განაწილების სხვადასხვა არხებსა და პლატფორმებზე.',
-    'features.sentiment.title': 'სენტიმენტის ანალიზი',
-    'features.sentiment.desc': 'AI-ზე დაფუძნებული დადებითი, ნეიტრალური და უარყოფითი ხსენებების გამოვლენა რეალურ დროში.',
-    'features.sources.title': 'წყაროს ბმულები',
-    'features.sources.desc': 'მყისიერი წვდომა ორიგინალ სტატიებზე ყველა ხსენებული წყაროს პირდაპირი ბმულებით.',
-    'features.reports.title': 'ავტომატური რეპორტები',
-    'features.reports.desc': 'შექმენი კვირეული, თვიური და წლიური შეჯამებები ავტომატურად.',
-    
+    "features.title": "მძლავრი ფუნქციონალი",
+    "features.subtitle":
+      "ავტომატიზირებული მედია მონიტორინგი, შედეგების ანალიზი და ზუსტი მონაცემები ერთ პლატფორმაზე",
+    "features.sov.title": "ბრენდის წილი მედიაში",
+    "features.sov.desc":
+      "გაზომე მედია გაშუქების მოცულობა არხების მიხედვით და აკონტროლე ბრენდის ხილვადობა ყველა პლატფორმაზე.",
+    "features.benchmark.title": "ტრენდების შედარებითი ანალიზი",
+    "features.benchmark.desc":
+      "დააკვირდი ცვლილებებს დროში. შეადარე მიმდინარე შედეგები ძველ მონაცემებს, გამოავლინე ტენდენციები და დაინახე როგორ იცვლება შენი ბრენდის მედია დინამიკა.",
+    "features.channel.title": "მედია არხების დეტალური ანალიტიკა",
+    "features.channel.desc":
+      "ნახე, როგორ ნაწილდება ბრენდის ხსენებები სხვადასხვა არხსა და პლატფორმაზე. ერთიანი, ნათელი და მარტივად გასაშიფრი გრაფიკებით.",
+    "features.sentiment.title": "სენტიმენტის ანალიზი",
+    "features.sentiment.desc":
+      "AI რეალურ დროში აიდენტიფიცირებს თითოეული მედია ხსენების ტონალობის: დადებითია, ნეიტრალური თუ უარყოფითი. შედეგად, იღებ ზუსტ და ობიექტურ სურათს ბრენდის მიმართ არსებულ საზოგადოებრივ განწყობაზე.",
+    "features.sources.title": "წვდომა წყაროებზე ",
+    "features.sources.desc":
+      "პლატფორმა აგროვებს პირდაპირ ბმულებს ორიგინალ სტატიებზე, რაც უზრუნველყოფს მონაცემების სრულ გამჭვირვალობას.",
+    "features.reports.title": "ავტომატიზირებული რეპორტინგი და ანგარიშები",
+    "features.reports.desc":
+      "ყოველდღიური, ყოველკვირეული, ტოველთვიური და წლიური ანგარიშები გენერირდება ავტომატურად",
+
     // Use Cases
-    'useCases.title': 'სანდო ანალიტიკოსებისთვის სხვადასხვა ინდუსტრიებში',
-    'useCases.ecommerce.title': 'ელ-კომერცია',
-    'useCases.ecommerce.desc': 'თვალი ადევნე ბრენდის ხილვადობას და კამპანიის გავლენას ყველა მარკეტინგულ არხსა და მედია საშუალებაზე.',
-    'useCases.financial.title': 'ფინანსური სექტორი',
-    'useCases.financial.desc': 'გააანალიზე საზოგადოების განწყობა და ბაზრის პოზიციონირება რეალურ დროში ფინანსური მედია მონიტორინგით.',
-    
+    "useCases.title": "სანდო ანალიტიკოსებისთვის სხვადასხვა ინდუსტრიებში",
+    "useCases.ecommerce.title": "ელ-კომერცია",
+    "useCases.ecommerce.desc":
+      "თვალი ადევნე ბრენდის ხილვადობას და კამპანიის გავლენას ყველა მარკეტინგულ არხსა და მედია საშუალებაზე.",
+    "useCases.financial.title": "ფინანსური სექტორი",
+    "useCases.financial.desc":
+      "გააანალიზე საზოგადოების განწყობა და ბაზრის პოზიციონირება რეალურ დროში ფინანსური მედია მონიტორინგით.",
+
     // CTA
-    'cta.title': 'მიიღე ძლიერი მედია ანალიტიკა – მყისიერად.',
-    'cta.subtitle': 'შეუერთდი წამყვან ორგანიზაციებს რომლებიც იყენებენ AI-ზე დაფუძნებულ მედია მონიტორინგს',
-    
+    "cta.title": "მიიღე ძლიერი მედია ანალიტიკა – მყისიერად.",
+    "cta.subtitle":
+      "შეუერთდი წამყვან ორგანიზაციებს რომლებიც იყენებენ AI-ზე დაფუძნებულ მედია მონიტორინგს",
+
     // Contact
-    'contact.title': 'დაგვიკავშირდით',
-    'contact.subtitle': 'გაქვთ კითხვები? ჩვენ მოხარული ვიქნებით მოვისმინოთ თქვენი აზრი.',
-    'contact.name': 'სახელი',
-    'contact.email': 'ელ-ფოსტა',
-    'contact.message': 'შეტყობინება',
-    'contact.send': 'გაგზავნა',
-    'contact.info': 'საკონტაქტო ინფორმაცია',
-    
+    "contact.title": "დაგვიკავშირდით",
+    "contact.subtitle":
+      "გაქვთ კითხვები? ჩვენ მოხარული ვიქნებით მოვისმინოთ თქვენი აზრი.",
+    "contact.name": "სახელი",
+    "contact.email": "ელ-ფოსტა",
+    "contact.message": "შეტყობინება",
+    "contact.send": "გაგზავნა",
+    "contact.info": "საკონტაქტო ინფორმაცია",
+
     // Footer
-    'footer.rights': '© 2025 Media Monitoring AI. ყველა უფლება დაცულია.',
-    'footer.company': 'კომპანია',
-    'footer.about': 'ჩვენ შესახებ',
-    'footer.careers': 'კარიერა',
-    'footer.blog': 'ბლოგი',
-    'footer.product': 'პროდუქტი',
-    'footer.features': 'ფუნქციები',
-    'footer.pricing': 'ფასები',
-    'footer.security': 'უსაფრთხოება',
+    "footer.rights": "© 2025 Media Monitoring AI. ყველა უფლება დაცულია.",
+    "footer.company": "კომპანია",
+    "footer.about": "ჩვენ შესახებ",
+    "footer.careers": "კარიერა",
+    "footer.blog": "ბლოგი",
+    "footer.product": "პროდუქტი",
+    "footer.features": "ფუნქციები",
+    "footer.pricing": "ფასები",
+    "footer.security": "უსაფრთხოება",
   },
 };
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>("en");
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations['en']] || key;
+    return (
+      translations[language][key as keyof (typeof translations)["en"]] || key
+    );
   };
 
   return (
@@ -166,7 +198,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
 };
