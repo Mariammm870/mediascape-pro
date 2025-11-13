@@ -26,6 +26,8 @@ const translations = {
     "hero.cta.contact": "Contact Us",
 
     // Problem/Solution
+    "problem.challenge": "The Challenge",
+    "problem.solution": "Our Solution",
     "problem.title": "Understand Your Media Landscape Instantly",
     "problem.text":
       "Organizations today face an overwhelming flow of media content across online news, print outlets, and social platforms. This constant volume creates a complex environment, where manual media monitoring becomes costly, slow, and ineffective making online reputation management and data-driven decisions significantly harder.",
@@ -89,6 +91,7 @@ const translations = {
     "footer.features": "Features",
     "footer.pricing": "Pricing",
     "footer.security": "Security",
+    "footer.address": "Kutaisi, St. Nino street N4",
   },
   ka: {
     // Navigation
@@ -107,6 +110,8 @@ const translations = {
     "hero.cta.contact": "გაიარე უფასო კონსულტაცია",
 
     // Problem/Solution
+    "problem.challenge": "გამოწვევა",
+    "problem.solution": "გამოსავალი",
     "problem.title": "გაიგე შენი მედია გარემო მყისიერად",
     "problem.text":
       "დღევანდელ რეალობაში ორგანიზაციები ეჯახებიან მედია მასალების უწყვეტ ნაკადს  ონლაინ ახალი ამბები, ბეჭდური მედია და სოციალური კონტენტი ერთად ქმნის რთულ და ქაოტურ ეკოსისტემას. მონიტორინგის ხელით მართვა ძვირი, ნელი და ხშირად არაეფექტურია, რაც სერიოზულად ართულებს ონლაინ რეპუტაციის დაცვას და ინფორმირებულ გადაწყვეტილებებს.",
@@ -139,18 +144,19 @@ const translations = {
       "ყოველდღიური, ყოველკვირეული, ტოველთვიური და წლიური ანგარიშები გენერირდება ავტომატურად",
 
     // Use Cases
-    "useCases.title": "სანდო ანალიტიკოსებისთვის სხვადასხვა ინდუსტრიებში",
+    "useCases.title": "სანდო AI პლატფოერმა წამყვანი ინდუსტრიებისთვის",
     "useCases.ecommerce.title": "ელ-კომერცია",
     "useCases.ecommerce.desc":
-      "თვალი ადევნე ბრენდის ხილვადობას და კამპანიის გავლენას ყველა მარკეტინგულ არხსა და მედია საშუალებაზე.",
-    "useCases.financial.title": "ფინანსური სექტორი",
+      "აკონტროლე ბრენდის ხილვადობა, გაზომე მარკეტინგული კამპანიის ROI და შეაფასე კონკურენტების ბრენდის ხმის წილი  ყველა ციფრულ არხზე.",
+    "useCases.financial.title": "ფინანსური მომსახურება და ბანკინგი",
     "useCases.financial.desc":
-      "გააანალიზე საზოგადოების განწყობა და ბაზრის პოზიციონირება რეალურ დროში ფინანსური მედია მონიტორინგით.",
+      "გააანალიზე საზოგადოებრივი განწყობა, შეაფასე ბაზრის პოზიციონირება და მართე რეპუტაციული რისკები რეალურ დროში ფინანსური მედია მონიტორინგის გამოყენებით.",
 
     // CTA
-    "cta.title": "მიიღე ძლიერი მედია ანალიტიკა – მყისიერად.",
+    "cta.title":
+      "იმოქმედე კრიზისამდე: ჩვენი AI აღმოაჩენს რისკებს, სანამ ისინი პრობლემად იქცევიან",
     "cta.subtitle":
-      "შეუერთდი წამყვან ორგანიზაციებს რომლებიც იყენებენ AI-ზე დაფუძნებულ მედია მონიტორინგს",
+      "კრიზისის პრევენცია იწყება პირველ ტალღამდე. შეუერთდი წამყვან ორგანიზაციებს, რომლებიც უკვე იყენებენ ჩვენს AI-ზე დაფუძნებულ მედია მონიტორინგის სისტემას სტრატეგიული უპირატესობისთვის. ",
 
     // Contact
     "contact.title": "დაგვიკავშირდით",
@@ -172,6 +178,7 @@ const translations = {
     "footer.features": "ფუნქციები",
     "footer.pricing": "ფასები",
     "footer.security": "უსაფრთხოება",
+    "footer.address": "ქ. ქუთაისი წმინდა ნინოს N4",
   },
 };
 

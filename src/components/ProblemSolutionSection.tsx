@@ -1,34 +1,38 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { CheckCircle2 } from 'lucide-react';
-import dashboardMockup from '@/assets/dashboard-mockup.jpg';
+import { useLanguage } from "@/contexts/LanguageContext";
+import { CheckCircle2 } from "lucide-react";
+import dashboardMockup from "@/assets/dashboard-mockup.jpg";
 
 export const ProblemSolutionSection = () => {
   const { t } = useLanguage();
 
   const solutions = [
-    t('solution.automated'),
-    t('solution.ai'),
-    t('solution.alerts'),
+    t("solution.automated"),
+    t("solution.ai"),
+    t("solution.alerts"),
   ];
 
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
-          {t('problem.title')}
+          {t("problem.title")}
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="space-y-6 animate-fade-in">
             <div className="bg-destructive/10 border border-destructive/20 rounded-xl p-6">
-              <h3 className="text-xl font-semibold mb-3 text-destructive">The Challenge</h3>
+              <h3 className="text-xl font-semibold mb-3 text-destructive">
+                {t("problem.challenge")}
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                {t('problem.text')}
+                {t("problem.text")}
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold mb-4">Our Solution</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                {t("problem.solution")}
+              </h3>
               {solutions.map((solution, index) => (
                 <div
                   key={index}

@@ -1,5 +1,5 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const { t } = useLanguage();
@@ -21,59 +21,90 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">{t('footer.company')}</h3>
+            <h3 className="font-semibold mb-4">{t("footer.company")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  {t('footer.about')}
+                  {t("footer.about")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  {t('footer.careers')}
+                  {t("footer.careers")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  {t('footer.blog')}
+                  {t("footer.blog")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">{t('footer.product')}</h3>
+            <h3 className="font-semibold mb-4">{t("footer.product")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#features" className="hover:text-foreground transition-colors">
-                  {t('footer.features')}
+                <a
+                  href="#features"
+                  className="hover:text-foreground transition-colors"
+                >
+                  {t("footer.features")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  {t('footer.pricing')}
+                  {t("footer.pricing")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  {t('footer.security')}
+                  {t("footer.security")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">{t('contact.info')}</h3>
+            <h3 className="font-semibold mb-4">{t("contact.info")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Tbilisi, Georgia</li>
-              <li>info@mediamonitoring.ai</li>
-              <li>+995 XXX XXX XXX</li>
+              <li>{t("footer.address")}</li>
+              <li>
+                <a
+                  href="mailto:info@nebulahub.ai"
+                  className="hover:text-foreground transition-colors"
+                >
+                  info@nebulahub.ai
+                </a>
+              </li>
+              <li>+995 571 33 33 03</li>
+              <li>+995 579 58 88 59</li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/nebula-ai-hub/posts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <li>
+                  <a
+                    href="https://www.facebook.com/p/Nebula-AI-Hub-61573891437689/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Facebook
+                  </a>
+                </li>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>{t('footer.rights')}</p>
+          <p>{t("footer.rights")}</p>
         </div>
       </div>
     </footer>
