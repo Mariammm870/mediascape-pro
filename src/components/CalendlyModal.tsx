@@ -1,5 +1,5 @@
-import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { X } from 'lucide-react';
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { X } from "lucide-react";
 
 interface CalendlyModalProps {
   open: boolean;
@@ -17,7 +17,7 @@ export const CalendlyModal = ({ open, onOpenChange }: CalendlyModalProps) => {
           <X className="h-4 w-4" />
         </button>
         <iframe
-          src="https://calendly.com/"
+          src="https://calendly.com/nebulahub-info/30min"
           width="100%"
           height="100%"
           frameBorder="0"
