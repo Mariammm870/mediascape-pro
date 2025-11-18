@@ -42,7 +42,9 @@ const Demo = () => {
       const result = await response.json();
 
       if (result.success) {
-        toast.success("Demo request sent successfully! We'll contact you shortly.");
+        toast.success(
+          "Demo request sent successfully! We'll contact you shortly."
+        );
         setFormData({ name: "", phone: "", company: "", message: "" });
       } else {
         toast.error("Failed to send request. Please try again.");

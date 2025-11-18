@@ -73,13 +73,19 @@ const translations = {
       "JJoin the leading organizations already leveraging our AI-powered media monitoring system for strategic advantage.",
 
     // Contact
-    "contact.title": "Get in Touch",
-    "contact.subtitle": "Have questions? We'd love to hear from you.",
+    "contact.title": "Get in Touch with our team", // Updated for consistency with Contact.tsx H1
+    "contact.subtitle": "Fill out the form and we will contact you shortly.", // Updated for consistency with Contact.tsx P
     "contact.name": "Name",
-    "contact.email": "Email",
+    "contact.phone": "Phone",
+    "contact.company": "Company",
     "contact.message": "Message",
-    "contact.send": "Send Message",
+    "contact.send": "Send", // Updated for button text
     "contact.info": "Contact Information",
+    "contact.address": "Address",
+    "contact.social": "Social Medias", // Updated for consistency
+    "contact.emailInfo": "Email", // New key for contact info card
+    "contact.phoneInfo": "Phone", // New key for contact info card
+    "contact.sending": "Sending...",
 
     // Footer
     "footer.rights": "© 2025 Media Monitoring AI. All rights reserved.",
@@ -94,17 +100,12 @@ const translations = {
     "footer.address": "Kutaisi, St. Nino street N4",
 
     // Demo Page
+    "demo.title": "Book a Demo", // New key for Demo.tsx H1
     "demo.subtitle": "Fill out the form and we will contact you shortly.",
     "demo.secure":
       "Your information is secure and will only be used to contact you.",
-    "contact.phone": "Phone",
-    "contact.company": "Company",
+    "demo.back": "Back to Home", // New key for back link
     "contact.phonePlaceholder": "+995 5XX XX XX XX",
-    "contact.address": "Address",
-    "contact.social": "Social Media",
-    "contact.success": "Message sent successfully! We'll contact you shortly.",
-    "contact.error": "Failed to send message. Please try again.",
-    "contact.sending": "Sending...",
   },
 
   ka: {
@@ -177,7 +178,7 @@ const translations = {
     "contact.subtitle":
       "გაქვთ კითხვები? ჩვენ მოხარული ვიქნებით მოვისმინოთ თქვენი აზრი.",
     "contact.name": "სახელი",
-    "contact.email": "ელ-ფოსტა",
+    "contact.emailInfo": "ელ-ფოსტა",
     "contact.message": "შეტყობინება",
     "contact.send": "გაგზავნა",
     "contact.info": "საკონტაქტო ინფორმაცია",

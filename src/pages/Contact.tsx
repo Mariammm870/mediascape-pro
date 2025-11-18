@@ -63,10 +63,10 @@ const Contact = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16 animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Get in touch with our team
+                {t("contact.title")}
               </h1>
               <p className="text-lg text-muted-foreground">
-                Fill out the form and we will contact you shortly.
+                {t("contact.subtitle")}
               </p>
             </div>
 
@@ -76,7 +76,8 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name" className="text-sm font-medium">
-                      Name <span className="text-destructive">*</span>
+                      {t("contact.name")}{" "}
+                      <span className="text-destructive">*</span>
                     </Label>
                     <Input
                       id="name"
@@ -91,7 +92,8 @@ const Contact = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-sm font-medium">
-                      Phone <span className="text-destructive">*</span>
+                      {t("contact.phone")}{" "}
+                      <span className="text-destructive">*</span>
                     </Label>
                     <Input
                       id="phone"
@@ -108,7 +110,8 @@ const Contact = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="company" className="text-sm font-medium">
-                      Company <span className="text-destructive">*</span>
+                      {t("contact.company")}{" "}
+                      <span className="text-destructive">*</span>
                     </Label>
                     <Input
                       id="company"
@@ -123,7 +126,7 @@ const Contact = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-sm font-medium">
-                      Message
+                      {t("contact.message")}
                     </Label>
                     <Textarea
                       id="message"
@@ -157,9 +160,15 @@ const Contact = () => {
                         <Phone className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                        <p className="text-muted-foreground">+995 571 33 33 03</p>
-                        <p className="text-muted-foreground">+995 579 58 88 59</p>
+                        <h3 className="font-semibold text-lg mb-2">
+                          {t("contact.phone")}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          +995 571 33 33 03
+                        </p>
+                        <p className="text-muted-foreground">
+                          +995 579 58 88 59
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -171,8 +180,12 @@ const Contact = () => {
                         <Mail className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg mb-2">Email</h3>
-                        <p className="text-muted-foreground">info@nebulahub.ai</p>
+                        <h3 className="font-semibold text-lg mb-2">
+                          {t("contact.emailInfo")}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          info@nebulahub.ai
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -184,9 +197,11 @@ const Contact = () => {
                         <MapPin className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg mb-2">Address</h3>
+                        <h3 className="font-semibold text-lg mb-2">
+                          {t("contact.address")}
+                        </h3>
                         <p className="text-muted-foreground">
-                          4, St. Nino Street, Kutaisi
+                          {t("footer.address")}
                         </p>
                       </div>
                     </div>
@@ -194,7 +209,9 @@ const Contact = () => {
 
                   {/* Social Media */}
                   <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
-                    <h3 className="font-semibold text-lg mb-4">Social Medias</h3>
+                    <h3 className="font-semibold text-lg mb-4">
+                      {t("contact.social")}
+                    </h3>
                     <div className="flex gap-4">
                       <a
                         href="#"
