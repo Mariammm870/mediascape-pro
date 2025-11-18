@@ -9,108 +9,25 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-4 mb-4">
-              <span className="font-bold text-3xl">Done by:</span>
+            <div className="flex items-center gap-6 flex-nowrap">
+              <span className="font-bold text-3xl whitespace-nowrap">
+                Done by:{" "}
+              </span>
 
               <img
                 src="/logo circle black bg.svg"
                 alt="Logo"
                 className="h-14 w-auto"
               />
+
+              <div className="flex items-center gap-7 whitespace-nowrap">
+                <span className="font-bold text-lg">Media Monitoring AI</span>
+                <span className="text-sm text-muted-foreground">
+                  AI-powered media monitoring and analytics platform
+                </span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="font-bold text-lg">Media Monitoring AI</span>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              AI-powered media monitoring and analytics platform
-            </p>
           </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">{t("footer.company")}</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  {t("footer.about")}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  {t("footer.careers")}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  {t("footer.blog")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">{t("footer.product")}</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a
-                  href="#features"
-                  className="hover:text-foreground transition-colors"
-                >
-                  {t("footer.features")}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  {t("footer.pricing")}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  {t("footer.security")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">{t("contact.info")}</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>{t("footer.address")}</li>
-              <li>
-                <a
-                  href="mailto:info@nebulahub.ai"
-                  className="hover:text-foreground transition-colors"
-                >
-                  info@nebulahub.ai
-                </a>
-              </li>
-              <li>+995 571 33 33 03</li>
-              <li>+995 579 58 88 59</li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/nebula-ai-hub/posts"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                >
-                  LinkedIn
-                </a>
-                <li>
-                  <a
-                    href="https://www.facebook.com/p/Nebula-AI-Hub-61573891437689/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Facebook
-                  </a>
-                </li>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>{t("footer.rights")}</p>
         </div>
       </div>
     </footer>

@@ -92,7 +92,21 @@ const translations = {
     "footer.pricing": "Pricing",
     "footer.security": "Security",
     "footer.address": "Kutaisi, St. Nino street N4",
+
+    // Demo Page
+    "demo.subtitle": "Fill out the form and we will contact you shortly.",
+    "demo.secure":
+      "Your information is secure and will only be used to contact you.",
+    "contact.phone": "Phone",
+    "contact.company": "Company",
+    "contact.phonePlaceholder": "+995 5XX XX XX XX",
+    "contact.address": "Address",
+    "contact.social": "Social Media",
+    "contact.success": "Message sent successfully! We'll contact you shortly.",
+    "contact.error": "Failed to send message. Please try again.",
+    "contact.sending": "Sending...",
   },
+
   ka: {
     // Navigation
     "nav.features": "ფუნქციები",
@@ -179,6 +193,19 @@ const translations = {
     "footer.pricing": "ფასები",
     "footer.security": "უსაფრთხოება",
     "footer.address": "ქ. ქუთაისი წმინდა ნინოს N4",
+
+    // Demo Page
+    "demo.subtitle": "შეავსეთ ფორმა და დაგიკავშირდებით მალევე.",
+    "demo.secure":
+      "თქვენი ინფორმაცია დაცულია და გამოყენებული იქნება მხოლოდ თქვენთან დასაკავშირებლად.",
+    "contact.phone": "ტელეფონი",
+    "contact.company": "კომპანია",
+    "contact.phonePlaceholder": "+995 5XX XX XX XX",
+    "contact.address": "მისამართი",
+    "contact.social": "სოციალური მედია ",
+    "contact.success": "მესიჯი წარმატებით გაიგზავნა! მალე დაგიკავშირდებით.",
+    "contact.error": "მესიჯის გაგზავნა ვერ მოხერხდა. გთხოვთ, სცადეთ თავიდან.",
+    "contact.sending": "იგზავნება...",
   },
 };
 

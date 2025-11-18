@@ -61,7 +61,7 @@ const Demo = () => {
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to home
+              {t("demo.back")}
             </Link>
 
             <div className="text-center mb-12 animate-fade-in">
@@ -69,8 +69,7 @@ const Demo = () => {
                 Book a Demo
               </h1>
               <p className="text-lg text-muted-foreground">
-                Fill out the form and we will contact you shortly to schedule your
-                personalized demo.
+                {t("demo.subtitle")}
               </p>
             </div>
 
@@ -78,7 +77,8 @@ const Demo = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-sm font-medium">
-                    Name <span className="text-destructive">*</span>
+                    {t("contact.name")}{" "}
+                    <span className="text-destructive">*</span>
                   </Label>
                   <Input
                     id="name"
@@ -93,7 +93,8 @@ const Demo = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="phone" className="text-sm font-medium">
-                    Phone <span className="text-destructive">*</span>
+                    {t("contact.phone")}{" "}
+                    <span className="text-destructive">*</span>
                   </Label>
                   <Input
                     id="phone"
@@ -110,7 +111,8 @@ const Demo = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="company" className="text-sm font-medium">
-                    Company <span className="text-destructive">*</span>
+                    {t("contact.company")}{" "}
+                    <span className="text-destructive">*</span>
                   </Label>
                   <Input
                     id="company"
@@ -125,7 +127,7 @@ const Demo = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-sm font-medium">
-                    Message
+                    {t("contact.message")}
                   </Label>
                   <Textarea
                     id="message"
@@ -148,8 +150,7 @@ const Demo = () => {
 
                 <p className="text-sm text-muted-foreground text-center flex items-center justify-center gap-2">
                   <span className="text-orange-500">🔒</span>
-                  Your information is secure and will only be used to contact you
-                  about your demo.
+                  {t("demo.secure")}
                 </p>
               </form>
             </div>
