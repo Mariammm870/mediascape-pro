@@ -9,7 +9,6 @@ import { Footer } from "@/components/Footer";
 import { ArrowLeft, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
-import emailjs from "@emailjs/browser";
 
 const Demo = () => {
   const { t } = useLanguage();
@@ -26,24 +25,31 @@ const Demo = () => {
     setLoading(true);
 
     try {
-      await emailjs.send(
-        "service_4gb4on4",
-        "template_5ahwhvs",
-        {
-          from_name: formData.name,
-          from_phone: formData.phone,
-          from_company: formData.company,
-          message: formData.message,
-          to_email: "info@nebulahub.ai",
-        },
-        "lXsiZJAoZAH3RnS2n"
-      );
+      const data = new FormData();
+      data.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY_HERE");
+      data.append("name", formData.name);
+      data.append("phone", formData.phone);
+      data.append("company", formData.company);
+      data.append("message", formData.message);
+      data.append("subject", "New Demo Request");
+      data.append("from_name", "NebulaHub Demo Form");
 
-      toast.success("Message sent successfully! We'll contact you shortly.");
-      setFormData({ name: "", phone: "", company: "", message: "" });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Demo request sent successfully! We'll contact you shortly.");
+        setFormData({ name: "", phone: "", company: "", message: "" });
+      } else {
+        toast.error("Failed to send request. Please try again.");
+      }
     } catch (error) {
-      toast.error("Failed to send message. Please try again.");
-      console.error("EmailJS error:", error);
+      toast.error("Failed to send request. Please try again.");
+      console.error("Web3Forms error:", error);
     } finally {
       setLoading(false);
     }
