@@ -142,63 +142,71 @@ const Contact = () => {
 
               {/* Contact Info - Right Side */}
               <div className="lg:col-span-3 space-y-6">
-                <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-6 w-6 text-primary" />
+                {/* 2x2 Grid for Contact Info */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  {/* Phone */}
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Phone className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg mb-2">Phone</h3>
+                        <p className="text-muted-foreground">+995 571 33 33 03</p>
+                        <p className="text-muted-foreground">+995 579 58 88 59</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                      <p className="text-muted-foreground">+995 571 33 33 03</p>
-                      <p className="text-muted-foreground">+995 579 58 88 59</p>
+                  </div>
+
+                  {/* Email */}
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Mail className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg mb-2">Email</h3>
+                        <p className="text-muted-foreground">info@nebulahub.ai</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Address */}
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <MapPin className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg mb-2">Address</h3>
+                        <p className="text-muted-foreground">
+                          4, St. Nino Street, Kutaisi
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Social Media */}
+                  <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                    <h3 className="font-semibold text-lg mb-4">Social Medias</h3>
+                    <div className="flex gap-4">
+                      <a
+                        href="#"
+                        className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                      >
+                        <Facebook className="h-6 w-6 text-primary" />
+                      </a>
+                      <a
+                        href="#"
+                        className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                      >
+                        <Linkedin className="h-6 w-6 text-primary" />
+                      </a>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Email</h3>
-                      <p className="text-muted-foreground">info@nebulahub.ai</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Address</h3>
-                      <p className="text-muted-foreground">
-                        4, St. Nino Street, Kutaisi
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
-                  <h3 className="font-semibold text-lg mb-4">Social Medias</h3>
-                  <div className="flex gap-4">
-                    <a
-                      href="#"
-                      className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
-                    >
-                      <Facebook className="h-6 w-6 text-primary" />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
-                    >
-                      <Linkedin className="h-6 w-6 text-primary" />
-                    </a>
-                  </div>
-                </div>
-
+                {/* Map - Full Width Below */}
                 <div className="bg-card border border-border rounded-xl overflow-hidden shadow-sm">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.8847484476884!2d42.69936431551983!3d42.26822997919048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c8b0e0e0e0e0d%3A0x0!2s4%20St.%20Nino%20Street%2C%20Kutaisi!5e0!3m2!1sen!2sge!4v1234567890"
